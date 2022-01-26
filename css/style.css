@@ -1,0 +1,53 @@
+.parent{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    margin-bottom: 30px;
+}
+
+.child{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation-name: left-to-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    /* animation: left-to-right 1s ease-in-out 3s forwards 5 alternate; */
+}
+
+.parent:hover .child{
+    /* animation: left-to-right 1s ease-in-out forwards 5 alternate; */
+    animation-play-state: paused;
+}
+
+/* .child:hover{
+    animation-play-state: paused;
+} */
+
+@keyframes left-to-right{
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes left-to-right{
+    0%{
+        transform: translateX(0%);
+    }
+    33%{
+        transform: translateX(100%);
+    }
+    66%{
+        transform: translateX(100%) translateY(100%);
+    }
+    100%{
+        transform:translateY(100%);
+        background-color: yellow;
+    }
+}
+
+
